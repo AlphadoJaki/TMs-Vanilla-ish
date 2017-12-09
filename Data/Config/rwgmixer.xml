@@ -620,7 +620,12 @@
 				<property name="scale" value="182"/>
 			</module>
 
-			<output module="scaleBiasOutput"/>
+			<module name="clampOutput" type="ClampOutput">
+				<property name="sourceModule" value="scaleBiasOutput"/>
+				<property name="bounds" value="-28,1000"/>
+			</module>
+
+			<output module="clampOutput"/>
 		</terrain_generator>
 	</terrain_generators>
 
